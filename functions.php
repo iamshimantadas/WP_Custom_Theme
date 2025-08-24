@@ -1,9 +1,5 @@
 <?php 
 
-// include(get_template_directory()."/actions.php");
-// include(get_template_directory()."/woo-helper-functions.php");
-
-
 /** enqueue css, js, icons scripts */
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_assets');
 function my_theme_enqueue_assets() {
@@ -32,6 +28,15 @@ function cc_mime_types($mimes) {
 add_filter('upload_mimes', 'cc_mime_types');
 
 
+/** theme support for woocommerce */
+// add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
+// function mytheme_add_woocommerce_support()
+// {
+//     add_theme_support('woocommerce');
+//      add_theme_support( 'wc-product-gallery-zoom' );
+//      add_theme_support( 'wc-product-gallery-lightbox' );
+//      add_theme_support( 'wc-product-gallery-slider' );
+// }
 
 
 
