@@ -32,13 +32,13 @@ function custom_post_type_services() {
     'labels' => $labels,
     'public' => true,
     'query_var' => true,
-    'rewrite' => array('slug' => 'services'),
+    'rewrite' => array('slug' => 'service'),
     'has_archive' => true,
     'hierarchical' => false,
     'show_in_menu' => true,  // Ensure this is set to true  
     'menu_icon' => 'dashicons-list-view',  
     );
-    register_post_type('services', $args);
+    register_post_type('our_services', $args);
     }
 // activation hook    
 //  add_action('init', 'custom_post_type_services');
@@ -47,7 +47,7 @@ function custom_post_type_services() {
 /**adding taxonomy to post type ~ services */
 function add_custom_taxonomies() {
     // Add new "Category" taxonomy to Posts
-    register_taxonomy('service_category', 'services', array(
+    register_taxonomy('service_category', 'our_services', array(
       // Hierarchical taxonomy (like categories)
       'hierarchical' => true,
       'show_ui' => true,

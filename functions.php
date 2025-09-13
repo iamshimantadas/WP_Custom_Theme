@@ -27,16 +27,9 @@ function cc_mime_types($mimes) {
   }
 add_filter('upload_mimes', 'cc_mime_types');
 
-
-/** theme support for woocommerce */
-// add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
-// function mytheme_add_woocommerce_support()
-// {
-//     add_theme_support('woocommerce');
-//      add_theme_support( 'wc-product-gallery-zoom' );
-//      add_theme_support( 'wc-product-gallery-lightbox' );
-//      add_theme_support( 'wc-product-gallery-slider' );
-// }
+// Disable WordPress JPEG compression (set to 100%)
+add_filter('jpeg_quality', function($arg){ return 100; });
+add_filter('wp_editor_set_quality', function($arg){ return 100; });
 
 
 
