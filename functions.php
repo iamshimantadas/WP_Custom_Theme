@@ -14,6 +14,7 @@ function my_theme_enqueue_assets() {
 
 /** including post-types */
 // include_once(get_template_directory().'/post-types/'.'Services.php');
+// include_once(get_template_directory().'/post-types/'.'Faq.php');
 
 
 /** theme support */
